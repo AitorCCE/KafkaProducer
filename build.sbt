@@ -12,7 +12,7 @@ scalaVersion := "2.12.7"
 
 // It's possible to define many kinds of settings, such as:
 
-name := "hello-world"
+name := "kafka-spark"
 organization := "ch.epfl.scala"
 version := "1.0"
 
@@ -24,6 +24,17 @@ version := "1.0"
 // Want to use a published library in your project?
 // You can define other libraries as dependencies in your build like this:
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.4.0"
+libraryDependencies += "org.apache.kafka" % "kafka_2.11" % "1.0.0"
+libraryDependencies += "org.json" % "json" % "20180813"
+//libraryDependencies += "io.scalajs.npm" % "csvtojson_sjs0.6_2.12" % "0.4.2"
+//libraryDependencies += "com.github.tototoshi" %% "scala-csv" % "1.3.5"
+libraryDependencies += "io.spray" %%  "spray-json" % "1.3.5"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M3"
+libraryDependencies += "com.github.tototoshi" %% "scala-csv" % "1.3.5"
+
+//libraryDependencies += "org.scala-js" %% "scalajs-java-time" % "0.2.0"
+
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the cats dependency to the set of dependencies that sbt will go
 // and fetch when it starts up.
@@ -67,7 +78,7 @@ libraryDependencies += "org.typelevel" %% "cats-core" % "1.4.0"
 //       organization := "ch.epfl.scala",
 //       scalaVersion := "2.12.7"
 //     )),
-//     name := "hello-world"
+//     name := "kafka-spark"
 //   )
 
 // To learn more about multi-project builds, head over to the official sbt
