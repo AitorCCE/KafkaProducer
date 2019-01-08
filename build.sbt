@@ -1,6 +1,7 @@
 // The simplest possible sbt build file is just one line:
 
-scalaVersion := "2.12.7"
+//scalaVersion := "2.12.7"
+scalaVersion := "2.11.8"
 // That is, to create a valid sbt build, all you've got to do is define the
 // version of Scala you'd like your project to use.
 
@@ -26,14 +27,9 @@ version := "1.0"
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.4.0"
 libraryDependencies += "org.apache.kafka" % "kafka_2.11" % "1.0.0"
 libraryDependencies += "org.json" % "json" % "20180813"
-//libraryDependencies += "io.scalajs.npm" % "csvtojson_sjs0.6_2.12" % "0.4.2"
-//libraryDependencies += "com.github.tototoshi" %% "scala-csv" % "1.3.5"
-libraryDependencies += "io.spray" %%  "spray-json" % "1.3.5"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M3"
-libraryDependencies += "com.github.tototoshi" %% "scala-csv" % "1.3.5"
-
-//libraryDependencies += "org.scala-js" %% "scalajs-java-time" % "0.2.0"
+libraryDependencies += "org.apache.kafka" %% "kafka" % "1.0.0"
 
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the cats dependency to the set of dependencies that sbt will go
