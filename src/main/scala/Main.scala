@@ -3,32 +3,22 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 import org.json4s.DefaultFormats
 import scala.io.Source
 import org.json4s.native.JsonMethods._
-import org.json4s.native.Serialization.writePretty
 import org.json4s.JsonDSL.WithBigDecimal._
-
 
 object Main extends App {
 
-  val topic = "test"
-  // ¿Lista de brokers?
+  val topic = "KafkaProducerTopic"
   val brokers = "localhost:9092"
   val props = new Properties()
 
   props.put("bootstrap.servers", brokers)
+  //props.put("group.id", "ScalaProducer")
   props.put("client.id", "ScalaProducer")
   props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
   props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
 
   val producer = new KafkaProducer[String, String](props)
-  // ¿A sustituir en proximas iteraciones por *.csv o por un demonio para que lea
-  // según se generen/reciban ficheros en una ruta concreta?
   val bufferedSource = Source.fromFile("/home/utad/TFM/CitiBike/prueba_datos.csv")
-  /*
-    val header = Source.fromFile("/home/utad/TFM/CitiBike/prueba_datos.csv")
-      .getLines()
-      .take(1)
-      .toArray
-  */
 
   for (line <- bufferedSource.getLines.drop(1)) {
     val cols = line.split(",").map(_.trim)
@@ -50,8 +40,6 @@ object Main extends App {
 
     implicit val formats: DefaultFormats.type = DefaultFormats
 
-    // Uso de alguna librería para dejar en formato "bonito"?
-    //val msg = writePretty(compact(render(json)))
     val msg = compact(render(json))
     val data = new ProducerRecord[String, String](topic, msg)
 
