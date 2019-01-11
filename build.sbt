@@ -25,11 +25,13 @@ version := "1.0"
 // Want to use a published library in your project?
 // You can define other libraries as dependencies in your build like this:
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.4.0"
-libraryDependencies += "org.apache.kafka" % "kafka_2.11" % "1.0.0"
+//libraryDependencies += "org.apache.kafka" % "kafka_2.11" % "1.0.0"
 libraryDependencies += "org.json" % "json" % "20180813"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M3"
-libraryDependencies += "org.apache.kafka" %% "kafka" % "1.0.0"
+//libraryDependencies += "org.apache.kafka" %% "kafka" % "1.0.0"
+libraryDependencies += "org.apache.kafka" %% "kafka" % "0.8.2.1"
+
 
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the cats dependency to the set of dependencies that sbt will go
