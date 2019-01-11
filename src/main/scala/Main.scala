@@ -12,10 +12,10 @@ object Main extends App {
   val props = new Properties()
 
   props.put("bootstrap.servers", brokers)
-  //props.put("group.id", "ScalaProducer")
   props.put("client.id", "ScalaProducer")
   props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
   props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+
 
   val producer = new KafkaProducer[String, String](props)
   val bufferedSource = Source.fromFile("/home/utad/TFM/CitiBike/prueba_datos.csv")
