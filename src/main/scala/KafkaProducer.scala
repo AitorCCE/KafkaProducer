@@ -47,6 +47,7 @@ object KafkaProducer extends App {
 
     producer.send(data)
   }
+
   bufferedSource.close
 
   producer.close()

@@ -14,3 +14,4 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M3"
 libraryDependencies += "org.apache.kafka" %% "kafka" % "0.8.2.1"
 
+
