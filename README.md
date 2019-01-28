@@ -10,10 +10,9 @@ Aceleración de consultas a través del cálculo al vuelo de datos en streaming 
 *	Apache Spark.
 *	Apache Kafka.
 *	Apache Hadoop (HDFS).
-*	JSON.
 *	Elastic Search.
-*	Kibana.
 *	Scala.
+*	JSON.
 
 ## Origen de los datos:
 Dataset con datos sobre el uso del servicio CitiBike de bicicletas en Nueva York (https://www.citibikenyc.com/system-data)
